@@ -12,7 +12,6 @@ global = {
 mBreak = { }
 
 clarinetOne = \new Voice \relative c'' { 
-% \transpose d' a {
   \set Staff.instrumentName = #"Clarinette 1 "
   r2. |
   r2. |
@@ -101,7 +100,48 @@ clarinetTwo = \new Voice \relative c'' {
   }
 }
 
-clarinetThree = \new Voice {
+clarinetThree = \new Voice \relative c'' {
+  \set Staff.instrumentName = #"Clarinette 3"
+  r4. r4 dis8 |
+  e4 b8 fis4 a8 |
+  g4.~ g4 r8 
+  \repeat volta 2 {
+    b4. g4. |
+    a4. b4.~ |
+    b4. r4. |
+    r2. | %%% 7 
+    b4. r4. |
+    a4. b4.~ |
+    b4. fis4 a8 |
+    g4. g4 r8 |
+    b8.( d16 d8~) d4 b8 | 
+    a8.( b16 c8~) c4 a8 | %%% 13
+    g8.( a16 b8~) b4 c8 |
+    b4. r4. |
+    b8.( d16 d8~) d4 b8 |
+    fis8.( g16 a8) fis4 fis8 |
+    b4. fis4 a8 |
+    b4 g8 g4. | %%% 19
+    e2. |
+    fis4 d8 b4 b8~ |
+    b4.~ b8.( a16 b8) |
+    b4. b4  b'8 |
+    b4 a8 g8.( a16 b8) |
+    d4 a8 fis8.( g16 a8) |
+    b8.( a16 g8) fis8.( g16 fis8) |  %%% 26
+    a2. |
+    b8.( d16 d8~) d4 b8 |
+    a8.( b16 c8~) c4 a8 |
+    g8.( a16 b8~) b4 c8 |
+    b4. fis8 b16( c b a) |
+    b8.( d16 d8~) d4 b8 | %%% 32
+    fis8.( g16 a8) fis4 fis8 |
+    b4. fis4 a8 |
+  }
+  \alternative {
+    { g4. g4 r8 | }
+    { g4. g4\fermata r8 \bar "|."}
+  }
 }
 
 clarinetFour = \new Voice \relative c'' {
